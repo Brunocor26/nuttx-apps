@@ -1,0 +1,14 @@
+include $(APPDIR)/Make.defs
+
+# Pulse App built-in application info
+
+PROGNAME = $(CONFIG_CUSTOM_APPS_PULSE_PROGNAME)
+PRIORITY = $(CONFIG_CUSTOM_APPS_PULSE_PRIORITY)
+STACKSIZE = $(CONFIG_CUSTOM_APPS_PULSE_STACKSIZE)
+MODULE = $(CONFIG_CUSTOM_APPS_PULSE)
+
+# Pulse App
+
+MAINSRC = PulseApp.c
+
+include $(APPDIR)/Application.mk

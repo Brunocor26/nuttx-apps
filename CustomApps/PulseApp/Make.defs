@@ -1,0 +1,3 @@
+ifneq ($(CONFIG_CUSTOM_APPS_PULSE),)
+CONFIGURED_APPS += $(APPDIR)/CustomApps/PulseApp
+endif
