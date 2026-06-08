@@ -1,0 +1,29 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config CUSTOM_APPS_PULSE
+    tristate "Pulse App"
+    default n
+    ---help---
+        Enable the Pulse App
+
+if CUSTOM_APPS_PULSE
+
+config CUSTOM_APPS_PULSE_PROGNAME
+    string "Program name"
+    default "pulse_app"
+    ---help---
+        This is the name of the program that will be used when the NSH ELF
+        program is installed.
+
+config CUSTOM_APPS_PULSE_PRIORITY
+    int "Pulse App task priority"
+    default 100
+
+config CUSTOM_APPS_PULSE_STACKSIZE
+    int "Pulse App stack size"
+    default 2048
+
+endif
